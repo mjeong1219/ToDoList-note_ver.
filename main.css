@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background-color: yellowgreen;
+    width: 50vw;
+    min-width: 450px;
+    height: 90vh;
+    margin: 0 auto;
+    padding: 0 30px;
+    border: 1px wave black;
+    background: url("images/26863ba96eecca9fe62b2272c4996903.jpg");
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+header{
+    font-family: 'Gaegu', cursive;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 75px;
+    font-weight: 700;
+    letter-spacing: -10px;
+    padding: 20px 0 0 20px;
+
+    /* 여기만 드래그 금지 코드 */
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+header span{
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    animation: bounce 1s infinite;
+    /* 0.6초로 반복해서 뛴다. */
+}
+
+header:hover span:first-child{
+    color: rgb(223, 120, 177);
+}
+header:hover span:nth-child(2){
+    color: rgb(209, 115, 98);
+}
+header:hover span:nth-child(3){
+    color: rgb(8, 190, 8);
+}
+header:hover span:nth-child(4){
+    color: rgb(14, 177, 141);
+}
+header:hover span:nth-child(5){
+    color: rgb(201, 198, 27);
+}
+header:hover span:nth-child(6){
+    color: rgb(126, 123, 250);
+}
+header:hover span:nth-child(7){
+    color: rgb(77, 0, 177);
+}
+header:hover span:nth-child(8){
+    color: tomato;
+}
+
+@keyframes bounce{
+    0%, 100% {
+    transform: translate(0);
+    }
+    25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+    }
+    50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+    }
+}
+
+header span:nth-child(2) {
+    animation-delay: 0.05s;
+}
+header span:nth-child(3) {
+    animation-delay: 0.1s;
+}
+header span:nth-child(4) {
+    animation-delay: 0.15s;
+}
+header span:nth-child(5) {
+    animation-delay: 0.2s;
+}
+header span:nth-child(6) {
+    animation-delay: 0.25s;
+}
+header span:nth-child(7) {
+    animation-delay: 0.3s;
+}
+header span:nth-child(8) {
+    animation-delay: 0.35s;
+}
+
+.inputField{
+    width: 100%;
+    height: 50px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 40px;
+    margin-top: 30px;
+    justify-content: right;
+}
+
+.inputField img{
+    width: 30px;
+}
+
+.inputField input{
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px
+}
+
+.inputField button{
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    transition: all 0.2s;
+    font-size: 12px;
+    padding: 3px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.inputField button:hover{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.inputField button:active{
+    background-color: rgba(156, 156, 156, 0.5);
+}
+
+.toDoList{
+    width: 100%;
+    height: 100%;
+    /* background-color: brown; */
+    list-style: none;
+    font-size: 30px;
+    font-family: 'Gaegu', cursive;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* 기본형은 no-wrap이고 flex했을 때는 자식요소의 넓이와 상관없이
+    계속 옆에 붙기 때문에 wrap을 주면 부모요소의 넓이를 넘어가면 아래로 내려감. */
+    gap: 2%;
+}
+
+.toDoList li{
+    padding: 10px 0;
+    padding-left: 30px;
+    border-bottom: 1px solid;
+    width: 49%;
+    /* 전체 100%에 li들끼리 붙지 않도록 중간 간격을 주기 위해
+    49%로로 했다. */
+
+}
+
+.toDoList button{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: none;
+    border: none;
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Gaegu', cursive;
+}
+
+.toDoList button:hover{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.toDoList button:active{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.footer button{
+    width: 40px;
+    height: 40px;
+    margin: 30px 0;
+    float: right;
+    padding: 5px 10px;
+    background: url("images/eraser.png") center no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
+
+.footer button:hover{
+    filter: grayscale(100%);
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width:1420px){
+    .toDoList li{
+        width: 100%;
+    }
+}

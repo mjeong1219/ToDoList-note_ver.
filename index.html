@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+    <title>ToDoList</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <span>T</span>
+            <span>o</span>
+            <span>D</span>
+            <span>o</span>
+            <span>L</span>
+            <span>i</span>
+            <span>s</span>
+            <span>t</span>
+        </header>
+        <div class="inputField">
+            <img src="images/pencil.png" alt="연필">
+            <input type="text" id="addValue" placeholder="할 일을 입력해주세요." autofocus/>
+            <button id="btn" type="button" onclick="addToDo()"><i class="xi-plus xi-2x"></i></button>
+        </div>
+        <div>
+            <ul id="result" class="toDoList"></ul>
+        </div>
+        <div class="footer">
+            <button type="button" id="allClear" onclick="allClearList()">
+                <!-- <img src="images/eraser.png" alt="지우개"> -->
+            </button>
+        </div>
+    </div>
+</body>
+</html>
